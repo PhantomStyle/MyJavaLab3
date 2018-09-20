@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="db">
+  <database-model serializer="dbm" rdbms="H2" format-version="4.4">
+    <root id="1"/>
+    <database id="2" parent="1" name="DB">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="INFORMATION_SCHEMA"/>
+    <schema id="4" parent="2" name="PUBLIC">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <table id="5" parent="4" name="CLOTHES"/>
+    <column id="6" parent="5" name="WASHING_TEMPERATURE">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4</DataType>
+    </column>
+    <column id="7" parent="5" name="IRON_TEMPERATURE">
+      <Position>2</Position>
+      <DataType>INTEGER(10)|4</DataType>
+    </column>
+    <column id="8" parent="5" name="COLOR">
+      <Position>3</Position>
+      <DataType>VARCHAR(5)|12</DataType>
+    </column>
+    <column id="9" parent="5" name="ID">
+      <Position>4</Position>
+      <DataType>BIGINT(19)|-5</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_57B68989_BAF8_41F0_AE95_54291A4CD099)</DefaultExpression>
+    </column>
+    <key id="10" parent="5" name="CONSTRAINT_42">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

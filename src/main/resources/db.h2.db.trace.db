@@ -1,0 +1,25 @@
+09-17 22:36:31 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Схема "DB" не найдена
+Schema "DB" not found; SQL statement:
+INSERT INTO DB.PUBLIC.CLOTHES VALUES (?,?,?) [90079-148]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.Parser.getSchema(Parser.java:607)
+	at org.h2.command.Parser.getSchema(Parser.java:614)
+	at org.h2.command.Parser.readTableOrView(Parser.java:4546)
+	at org.h2.command.Parser.readTableOrView(Parser.java:4540)
+	at org.h2.command.Parser.parseInsert(Parser.java:922)
+	at org.h2.command.Parser.parsePrepared(Parser.java:371)
+	at org.h2.command.Parser.parse(Parser.java:275)
+	at org.h2.command.Parser.parse(Parser.java:247)
+	at org.h2.command.Parser.prepare(Parser.java:201)
+	at org.h2.command.Parser.prepareCommand(Parser.java:214)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1056)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:71)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:233)
+	at clothes.dao.ClothesDao.create(ClothesDao.java:49)
+	at app.App.load(App.java:33)
+	at app.App.main(App.java:55)
